@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PUREVA - Water Filtration</title>
+
+<style>
+:root{
+  --primary:#38bdf8;
+  --accent:#22c55e;
+  --text:#eaf6ff;
+  --muted:#cfe8ff;
+  --glass:rgba(255,255,255,0.10);
+  --border:rgba(255,255,255,0.18);
+  --dark:rgba(0,0,0,0.55);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui, Arial;
+}
+
+html{scroll-behavior:smooth;}
+
+section{scroll-margin-top:90px;}
+
+body{
+  color:var(--text);
+  background:url('https://images.unsplash.com/photo-1518837695005-2083093ee35b') center/cover no-repeat fixed;
+  position:relative;
+  min-height:100vh;
+  filter:brightness(1.15);
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.25);
+  z-index:-1;
+}
+
+/* NAV */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 6%;
+  background:rgba(0,0,0,0.35);
+  backdrop-filter: blur(14px);
+  z-index:1000;
+  border-bottom:1px solid var(--border);
+}
+
+.logo{
+  font-weight:800;
+  letter-spacing:2px;
+  color:#ffffff;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+}
+
+.navbar a{
+  color:#ffffff;
+  text-decoration:none;
+  font-size:14px;
+  opacity:0.95;
+  transition:0.3s;
+}
+
+.navbar a:hover{
+  color:var(--primary);
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+}
+
+.hero-content{
+  max-width:650px;
+  background:var(--dark);
+  padding:40px;
+  border-radius:22px;
+  backdrop-filter: blur(14px);
+  border:1px solid var(--border);
+}
+
+.hero h1{
+  font-size:64px;
+  color:var(--primary);
+}
+
+.hero p{
+  margin-top:14px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.btn{
+  margin-top:22px;
+  padding:12px 24px;
+  border-radius:12px;
+  border:none;
+  cursor:pointer;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  color:#001018;
+  font-weight:700;
+  transition:0.3s;
+  text-decoration:none;
+  display:inline-block;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* SECTION */
+.section{
+  max-width:1100px;
+  margin:30px auto;
+  padding:70px 20px;
+  background:var(--dark);
+  border:1px solid var(--border);
+  border-radius:22px;
+  text-align:center;
+}
+
+.section h2{
+  color:var(--primary);
+  margin-bottom:14px;
+  font-size:32px;
+}
+
+.section p{
+  color:var(--muted);
+  max-width:750px;
+  margin:auto;
+}
+
+/* CARDS */
+.card-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+
+.card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  padding:22px;
+  border-radius:18px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--primary);
+}
+
+.card h3{
+  color:var(--primary);
+  margin-bottom:8px;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+/* BUY SECTION (FIXED MODERN) */
+.buy-card{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.price{
+  font-size:20px;
+  font-weight:700;
+  color:var(--accent);
+}
+
+.card button{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  font-weight:700;
+}
+
+/* CONTACT */
+.contact-card{
+  max-width:500px;
+  margin:auto;
+  background:var(--glass);
+  padding:30px;
+  border-radius:20px;
+  border:1px solid var(--border);
+  text-align:left;
+}
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">PUREVA</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#product">Product</a>
+    <a href="#buy">Buy</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>PUREVA</h1>
+    <p>Advanced water filtration system for pure, healthy and safe drinking water.</p>
+    <a class="btn" href="#buy">Buy Now</a>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>About PUREVA</h2>
+  <p>Advanced water purification designed for purity, safety and sustainability.</p>
+</section>
+
+<section class="section" id="features">
+  <h2>Features</h2>
+  <div class="card-container">
+    <div class="card"><h3>99.9% Purification</h3><p>Removes contaminants</p></div>
+    <div class="card"><h3>Eco Friendly</h3><p>Sustainable system</p></div>
+    <div class="card"><h3>Easy Setup</h3><p>Quick installation</p></div>
+  </div>
+</section>
+
+<section class="section" id="product">
+  <h2>PUREVA System</h2>
+  <p>Next-generation smart filtration technology.</p>
+</section>
+
+<section class="section" id="buy">
+  <h2>Buy PUREVA FILTER</h2>
+  <div class="card-container">
+
+    <div class="card buy-card">
+      <h3>Basic</h3>
+      <div class="price">199 DT</div>
+      <p>Perfect for home use</p>
+      <button>Order Now</button>
+    </div>
+
+    <div class="card buy-card">
+      <h3>Pro</h3>
+      <div class="price">399 DT</div>
+      <p>Advanced filtration</p>
+      <button>Order Now</button>
+    </div>
+
+    <div class="card buy-card">
+      <h3>Ultra</h3>
+      <div class="price">799 DT</div>
+      <p>Maximum purity</p>
+      <button>Order Now</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="contact-card">
+    <h2>Contact</h2>
+    <p><strong>Phone:</strong> +216 70 100 100</p>
+    <p><strong>Email:</strong> pureva.pureva@gmail.com</p>
+    <p><strong>Head Office:</strong> Tunis, Tunisia</p>
+  </div>
+</section>
+
+</body>
+</html>
